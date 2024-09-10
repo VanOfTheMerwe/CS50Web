@@ -1,0 +1,108 @@
+a {
+    text-decoration: none;
+    font-family: 'Poppins';
+}
+
+button {
+    font-family: 'Poppins';
+}
+
+label {
+    width: 40px;
+    height: 30px;
+    margin: 10px;
+    padding: 10px;
+}
+
+#form {
+    text-align: center;
+}
+
+.other-bodies {
+    background-color: white;
+    font-family: 'Poppins';
+    text-align: center;
+}
+
+.advanced-body {
+    background-color: white;
+    font-family: 'Poppins';
+}
+
+.adv-search-button {
+    border: none;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 2px 2px 10px #ccc;
+    font-family: 'Poppins';
+    margin: 5px;
+    background-color: #89CFF0;
+    color: white;
+}
+
+.input {
+    border: none;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 2px 2px 10px #ccc;
+    width: 80%;
+    height: 40px;
+}
+
+.button {
+    border: none;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 2px 2px 10px #ccc;
+    font-family: 'Poppins';
+    margin: 5px;
+}
+
+.search-button {
+    border: none;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 2px 2px 10px #ccc;
+    font-family: 'Poppins';
+    margin: 5px;
+}
+
+.search-button:hover {
+    cursor: pointer;
+}
+
+/*
+.link-buttons {
+    justify-content: center;
+    text-align: center;
+    margin: auto;
+    padding: auto;
+    align-self: center  ;
+}
+/*  */
+/* .reg-search-div {
+    align-self: center;
+} */
+
+/* hoe de fok kry ek dit reg om die donnerse knoppie in die middel te kry */
+/* The centering of the buttons to the other search pages was done by Tristin Bellringer (CloudyJumper) */
+
+.btn {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-end;
+    border: none;
+    /* padding: 10px;
+    border-radius: 10px;
+    box-shadow: 2px 2px 10px #ccc; */
+}
+
+.link-buttons {
+    border: none;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 2px 2px 10px #ccc;
+    margin: 10px;
+}
+

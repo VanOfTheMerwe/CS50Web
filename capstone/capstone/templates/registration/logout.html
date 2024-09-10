@@ -1,0 +1,10 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<body>
+  <h1>You are Logged Out...</h1>
+  <form method="post">
+    <a href="{% url 'login' %}" class="loginlink">Login again</a>
+  </form>
+</body>
+{% endblock %}

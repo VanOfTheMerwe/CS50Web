@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+{% block content %}
+    <h1 id='songListHeader'>Your songs:</h1>
+    <a href="{% url 'song_add' %}" id="addNewSongBtn">Add</a>
+    <br>
+    <p></p>
+    <table id="songInfoHeaders">
+        <tr>
+            <td class="headersOfList">Song:</td>
+            <td class="headersOfList">Artist:</td>
+            <td class="headersOfList">Date Added:</td>
+            <td id="mainEditCol">Edit Song:</td>
+            <td id="mainDeleteCol">Delete Song:</td>
+        </tr>
+    </table>
+    {% for song in songs %}
+        <table id="songsAdded">
+            <tr>
+                <td class="infoSongs">{{ song.title }}</td>
+                <td class="infoSongs">{{ song.artist }}</td>
+                <td class="infoSongs">{{ song.date_added }}</td>
+                <td class="editCol"><a href="{% url 'song_edit' song.id %}" id="editSong">Edit</a> </td>
+                <td class="deleteCol"><a href="{% url 'song_delete' song.id %}" id="deleteSong">Delete</a></td>
+            </tr>
+        </table>
+        {% endfor %}
+{% endblock %}

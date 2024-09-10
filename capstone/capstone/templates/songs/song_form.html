@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <h1>{% if form.instance.id %}Edit{% else %}Add{% endif %} Song</h1>
+    <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit" class="submitBtn">Save</button>
+    </form>
+    <br>
+    <a href="{% url 'song_list' %}" class="cancelBtn">Return to list</a>
+{% endblock %}

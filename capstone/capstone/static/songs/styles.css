@@ -1,0 +1,219 @@
+#songListHeader {
+    font-size: 24px;
+    color: white;
+}
+
+#songInfoHeaders {
+    text-align: center;
+    text-decoration: underline;
+    font-weight: bold;
+    font-size: larger;
+
+}
+
+#mainEditCol {
+    width: 100px;
+    background-color: green;
+    color: #ddd;
+}
+
+#mainDeleteCol {
+    width: 100px;
+    background-color: red;
+    color: #ddd;
+}
+
+#addNewSongBtn {
+    font-size: 18px;
+    color: white;
+    background-color: rgb(27, 178, 163);
+    border: none;
+    padding: 10px 20px;
+    border-radius: 12%;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+#addNewSongBtn:hover {
+    color: black;
+    transition: background-color 0.3s ease;
+}
+
+#editSong {
+    text-decoration: none;
+    color: #ddd;
+}
+
+#editSong:hover {
+    color: black;
+    transition: background-color 0.3s ease;
+}
+
+#deleteSong {
+    text-decoration: none;
+    color: #ddd;
+}
+
+#deleteSong:hover {
+    color: black;
+    transition: background-color 0.3s ease;
+}
+
+.logoutlink {
+    color: white;
+    text-decoration: none;
+    padding: 20px;
+}
+
+.logoutlink:hover {
+    color: red;
+    transition: background-color 0.3s ease;
+}
+
+.cancelBtn {
+    color: white;
+    text-decoration: none;
+    padding: 20px;
+    font-size: 18px;
+    color: white;
+    background-color: red;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 12%;
+    cursor: pointer;
+}
+
+.cancelBtn:hover {
+    color: black;
+    transition: background-color 0.3s ease;
+}
+
+.loginlink {
+    font-size: 18px;
+    color: white;
+    background-color: rgb(27, 178, 163);
+    border: none;
+    padding: 10px 20px;
+    border-radius: 12%;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.loginlink:hover {
+    color: rgb(0, 0, 0);
+    transition: background-color 0.3s ease;
+}
+
+
+.editCol {
+    width: 100px;
+    background-color: green;
+}
+
+.deleteCol {
+    width: 100px;
+    background-color: red;
+}
+
+.theText {
+    font-size: 24px;
+    color: white;
+}
+
+.headersOfList {
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    text-align: center;
+    background-color: rgb(27, 178, 163);
+}
+
+.theNavBarLinks  {
+    color: white;
+    text-decoration: none;
+    padding: 20px;
+}
+
+.links {
+    color: white;
+    text-decoration: none;
+    padding: 20px;
+}
+
+.links:hover {
+    color: rgb(27, 178, 163);
+    transition: background-color 0.3s ease;
+}
+
+.theNavBarLinks:hover {
+    color: black;
+    transition: background-color 0.3s ease;
+}
+
+.submitBtn {
+    font-size: 18px;
+    color: white;
+    background-color: rgb(27, 178, 163);
+    border: none;
+    padding: 10px 20px;
+    border-radius: 12%;
+    cursor: pointer;
+}
+
+.submitBtn:hover {
+    color: black;
+    transition: background-color 0.3s ease;
+}
+
+.infoSongs {
+    color: gray;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    table-layout: fixed;
+    min-width: 500px;
+    border-radius: 50%;
+    border-collapse: separate;
+}
+
+td {
+    padding: 10px;
+    border: 1px solid #c2baba;
+    border-radius: 10px;
+    text-align: center;
+    background-color: rgb(64, 224, 208);
+    color: gray;
+}
+
+th {
+    background-color: #f2f2f2;
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+body {
+    background-color: rgb(51, 53, 53);
+    text-decoration: #ddd;
+    font-family: 'Nerko One', cursive;
+    color: #ddd;
+    text-align: center;
+}
+
+nav {
+    background-color: rgb(27, 178, 163);
+    padding: 10px;
+    text-align: left;
+    border-top-left-radius: round;
+    text-decoration: none;
+}
+
+.nerko-one-regular {
+    font-family: "Nerko One", cursive;
+    font-weight: 400;
+    font-style: normal;
+  }

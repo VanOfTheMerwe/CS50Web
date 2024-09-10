@@ -1,0 +1,26 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Nerko+One&display=swap" rel="stylesheet">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="{% static 'songs/styles.css' %}">
+        <title>Home</title>
+    </head>
+    <body class="theText">
+        <h1>Welcome to the Song List App</h1>
+        <p>This is the semi-useless homepage. <br>
+
+        {% if user.is_authenticated %}
+        <p>You are logged in as {{ user.username }}. <a href="{% url 'logout' %}" class="logoutlink">Logout</a></p>
+            <p><a href="{% url 'song_list' %}" class="links">Click here to view your songs.</a></p>
+        {% else %}
+        <p><a href="{% url 'login' %}" class="links">Login to view your songs</a></p>
+            <a href="{% url 'register' %}" class="links">Register an account to start adding songs</a></p> <br><br>
+        {% endif %}
+    </body>
+</html>

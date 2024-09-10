@@ -1,0 +1,32 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'songs/styles.css' %}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Nerko+One&display=swap" rel="stylesheet">
+    <title>Song list maker</title>
+</head>
+<body>
+    <header>
+        <nav> 
+            {% if user.is_authenticated %}
+                {{user.username}}
+                <a href="{% url 'song_list' %}" class="theNavBarLinks">Home</a>
+                <a href="{% url 'logout' %}" class="theNavBarLinks">Logout</a>
+            {% else %}
+                <a href="{% url 'login' %}" class="theNavBarLinks">Login</a>
+                <a href="{% url 'register' %}" class="theNavBarLinks">Register</a>
+            {% endif %}
+        </nav>
+    </header>
+    <main>
+        {% block content %}
+        {% endblock %}
+    </main>
+</body>
+</html>

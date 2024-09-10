@@ -1,0 +1,2 @@
+There are no requirements that I can think of for this project. 
+Just have your Django up to date my friend and we should be all good.
