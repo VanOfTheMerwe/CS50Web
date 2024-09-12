@@ -1,0 +1,24 @@
+textarea {
+    min-height: 400px;
+}
+
+.email-box {
+    border: 1px solid darkgray;
+    padding: 10px;
+    margin-bottom: 2px;
+    background-color: lightgray;
+    border-style: round;
+}
+
+.email-subject {
+    padding-left: 10px;
+}
+
+.unread {
+    background-color: gray;
+}
+
+.email-box:hover {
+    border-color: rgb(119, 117, 117);
+    background-color: gray;
+}

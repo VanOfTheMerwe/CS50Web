@@ -1,0 +1,71 @@
+{% extends "network/layout.html" %}
+{% load static %}
+
+{% block body %}
+    <h1>Following</h1>
+
+    <div class="all-posts">
+        {% for post in posts_of_the_page %}
+            <div class="row post" id="post_{{ post.id }}">
+                <!-- Post ID - Delete/comment later -->
+                <p class="id">{{ post.id }}</p>
+                <h5 class="username"><a href="{% url 'profile' user_id=post.user.id %}">@{{ post.user }}</a></h5>
+
+                <!-- Content -->
+                <h6 class="content" id="content_{{ post.id }}">{{ post.content }}</h6>
+
+                <!-- Edit Field -->
+                {% if user.is_authenticated %}
+                    {% if user == post.user %}
+                        <div class="edit-box" id="edit_{{ post.id }}">
+                            <textarea id="edit_content_{{ post.id }}" class="edit-ta">{{ post.content }}</textarea>
+                            <button onclick="save_edit({{ post.id }})" class="btn btn-success">Save</button>
+                            <button onclick="discard_edit({{ post.id }})" class="btn btn-danger">Discard</button>
+                        </div>
+                    {% endif %}
+                {% endif %}
+
+                <p class="date">{{ post.date }}</p>
+                
+                <p><i class="fa fa-heart" style="color: red;"></i>
+                    <!-- post likes -->
+                    {% for key, value in post_likes.items %}
+                        {% if key == post.id %}
+                            {{ value }}
+                        {% endif %}
+                    {% endfor %}
+                </p>
+                {% if user.is_authenticated %}
+                    {% if user == post.user %}
+                        <div id="edit_button_{{ post.id }}">
+                            <button onclick="edit_post({{ post.id }})" class="btn btn-success">Edit</button>
+                        </div>
+                    {% else %}
+                        {% if post.id in whoYouLiked %}
+                            <button class="btn btn-danger fa fa-thumbs-up col-1 like-btn" onclick="like({{ post.id }}, {{ whoYouLiked }})" id="{{ post.id }}"></button>
+                            <p>{{ whoYouLiked.count }}</p>
+                        {% else %}
+                            <button class="btn btn-info fa fa-thumbs-up col-1 like-btn" onclick="like({{ post.id }}, {{ whoYouLiked }})" id="{{ post.id }}"></button>
+                            <p>{{ whoYouLiked.count }}</p>
+                        {% endif %}
+                    {% endif %}
+                {% endif %}
+            </div>
+        {% endfor %}
+    </div>
+
+    <nav aria-label="Page navigation example">
+        <ul class="pagination d-flex justify-content-center">
+            {% if posts_of_the_page.has_previous %}
+                <li class="page-item"><a class="page-link" href="?page={{ posts_of_the_page.previous_page_number }}">Previous</a></li>
+            {% endif %}
+
+            {% if posts_of_the_page.has_next %}
+                <li class="page-item"><a class="page-link" href="?page={{ posts_of_the_page.next_page_number }}">Next</a></li>
+            {% endif %}
+        </ul>
+    </nav>
+
+    <script src="{% static 'network/index.js' %}"></script>
+
+{% endblock %}
